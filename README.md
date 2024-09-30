@@ -56,8 +56,14 @@ O projeto implementa um **leitor de arquivos `.txt`** que carrega a matriz de di
 As **matrizes de distâncias** representam o custo (ou a distância) entre cada par de cidades, servindo como base para a construção das rotas pelas formigas.
 
 #### Exemplo de Matriz de Distâncias para Oliver30:
-``` [0, 10, 15, 20, ..., 35] [10, 0, 25, 30, ..., 40] [15, 25, 0, 35, ..., 45] [20, 30, 35, 0, ..., 50] ```
 
+```plaintext
+  [0, 10, 15, 20, 35]
+  [10, 0, 25, 30, 40]
+  [15, 25, 0, 35, 45]
+  [20, 30, 35, 0, 50]
+  [35, 40, 45, 50, 0]
+```
 Cada valor representa a distância entre duas cidades, que é utilizada para calcular a eficiência das rotas.
 
 3. ### `Oliver30.py`

@@ -32,7 +32,27 @@ O TSP é um problema clássico de otimização em que um vendedor deve visitar t
 
 ## Estrutura do Código
 
-### 1. `Oliver30.py`
+### 1. Leitor de Arquivos `.txt` para Matrizes de Distâncias
+
+O projeto implementa um **leitor de arquivos `.txt`** que carrega a matriz de distâncias entre cidades para ser utilizada no algoritmo de Colônia de Formigas. A matriz de distâncias, representada como valores separados por vírgulas, é lida de um arquivo e convertida em um array NumPy para facilitar o processamento.
+
+
+1. ### **Carregamento da Matriz**:
+   O arquivo `.txt` contendo a matriz de distâncias é lido linha por linha. Cada linha representa as distâncias de uma cidade para as outras, e essas distâncias são armazenadas em uma matriz bidimensional.
+
+   ```python
+   def carregar_matriz(self, arquivo):
+       """Carrega a matriz de distâncias do arquivo."""
+       with open(arquivo, 'r') as f:
+           linhas = f.readlines()
+           distancias = []
+           for linha in linhas:
+               distancias_linha = [float(x) for x in linha.split(',')]
+               distancias.append(distancias_linha)
+       return np.array(distancias)
+
+
+2. ### `Oliver30.py`
 Este arquivo implementa o ACO para um cenário com **30 cidades**. A matriz de distâncias é específica para estas cidades, e o objetivo é encontrar a rota mais curta que conecta todas elas e retorna à cidade de origem.
 
 #### Funções Principais:
@@ -41,7 +61,7 @@ Este arquivo implementa o ACO para um cenário com **30 cidades**. A matriz de d
 - `atualizar_feromonio()`: Atualiza as trilhas de feromônio com base nas rotas encontradas.
 - `melhorar_solucao()`: Avalia as soluções encontradas e otimiza as rotas.
 
-### 2. `Rykel48.py`
+3. ### `Rykel48.py`
 Este arquivo aplica o ACO em um cenário com **48 cidades**, uma versão mais complexa do problema com uma matriz de distâncias maior. O objetivo também é encontrar a rota mais curta entre todas as cidades e retornar à cidade de origem.
 
 #### Funções Principais:
@@ -55,3 +75,30 @@ As **matrizes de distâncias** representam o custo (ou a distância) entre cada 
 
 #### Exemplo de Matriz de Distâncias para Oliver30:
 ``` [0, 10, 15, 20, ..., 35] [10, 0, 25, 30, ..., 40] [15, 25, 0, 35, ..., 45] [20, 30, 35, 0, ..., 50] ```
+
+Cada valor representa a distância entre duas cidades, que é utilizada para calcular a eficiência das rotas.
+
+## Tecnologias e Bibliotecas Utilizadas
+
+- **Python**: Linguagem de programação principal usada no projeto.
+- **NumPy**: Utilizada para operações matemáticas e manipulação de arrays, facilitando o cálculo de distâncias e a gestão de matrizes.
+- **Matplotlib**: Usada para a visualização dos resultados, como a exibição dos grafos e as rotas geradas pelo algoritmo.
+- **CSV**: Usado para salvar os resultados das simulações, permitindo uma análise posterior dos dados.
+
+
+## Resultados Esperados
+
+Após rodar as simulações, você verá as soluções otimizadas para as rotas das 30 cidades e 48 cidades, junto com métricas como tempo de execução e eficiência das rotas.
+
+
+## Como Executar o Projeto
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seuusuario/ACO_Project.git
+
+
+
+## Referências Bibliográficas
+
+Dorigo, M., & Gambardella, L. M. (1997). Ant Colony System: A Cooperative Learning Approach to the Traveling Salesman Problem. *IEEE Transactions on Evolutionary Computation*, 1(1), 53-66.

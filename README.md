@@ -52,7 +52,15 @@ O projeto implementa um **leitor de arquivos `.txt`** que carrega a matriz de di
        return np.array(distancias)
 
 
-2. ### `Oliver30.py`
+2. ### Matrizes de Distâncias
+As **matrizes de distâncias** representam o custo (ou a distância) entre cada par de cidades, servindo como base para a construção das rotas pelas formigas.
+
+#### Exemplo de Matriz de Distâncias para Oliver30:
+``` [0, 10, 15, 20, ..., 35] [10, 0, 25, 30, ..., 40] [15, 25, 0, 35, ..., 45] [20, 30, 35, 0, ..., 50] ```
+
+Cada valor representa a distância entre duas cidades, que é utilizada para calcular a eficiência das rotas.
+
+3. ### `Oliver30.py`
 Este arquivo implementa o ACO para um cenário com **30 cidades**. A matriz de distâncias é específica para estas cidades, e o objetivo é encontrar a rota mais curta que conecta todas elas e retorna à cidade de origem.
 
 #### Funções Principais:
@@ -61,7 +69,7 @@ Este arquivo implementa o ACO para um cenário com **30 cidades**. A matriz de d
 - `atualizar_feromonio()`: Atualiza as trilhas de feromônio com base nas rotas encontradas.
 - `melhorar_solucao()`: Avalia as soluções encontradas e otimiza as rotas.
 
-3. ### `Rykel48.py`
+4. ### `Rykel48.py`
 Este arquivo aplica o ACO em um cenário com **48 cidades**, uma versão mais complexa do problema com uma matriz de distâncias maior. O objetivo também é encontrar a rota mais curta entre todas as cidades e retornar à cidade de origem.
 
 #### Funções Principais:
@@ -70,13 +78,6 @@ Este arquivo aplica o ACO em um cenário com **48 cidades**, uma versão mais co
 - `exibir_grafo()`: Exibe o grafo, mostrando visualmente as trilhas de feromônio e as conexões entre as cidades.
 - `salvar_resultados()`: Salva os resultados da simulação em formato CSV ou gráfico.
 
-### 3. Matrizes de Distâncias
-As **matrizes de distâncias** representam o custo (ou a distância) entre cada par de cidades, servindo como base para a construção das rotas pelas formigas.
-
-#### Exemplo de Matriz de Distâncias para Oliver30:
-``` [0, 10, 15, 20, ..., 35] [10, 0, 25, 30, ..., 40] [15, 25, 0, 35, ..., 45] [20, 30, 35, 0, ..., 50] ```
-
-Cada valor representa a distância entre duas cidades, que é utilizada para calcular a eficiência das rotas.
 
 ## Tecnologias e Bibliotecas Utilizadas
 

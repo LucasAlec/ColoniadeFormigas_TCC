@@ -91,14 +91,13 @@ Cada valor representa a distância entre duas cidades, que é utilizada para cal
 Após rodar as simulações, você verá as soluções otimizadas para as rotas das 30 cidades e 48 cidades, junto com métricas como tempo de execução e eficiência das rotas.
 
 
+
+## Referências Bibliográficas
+
+Dorigo, M., & Gambardella, L. M. (1997). Ant Colony System: A Cooperative Learning Approach to the Traveling Salesman Problem. *IEEE Transactions on Evolutionary Computation*, 1(1), 53-66.
+
 ## Como Executar o Projeto
 
 1. Clone o repositório:
    ```bash
    git clone https://github.com/seuusuario/ACO_Project.git
-
-
-
-## Referências Bibliográficas
-
-Dorigo, M., & Gambardella, L. M. (1997). Ant Colony System: A Cooperative Learning Approach to the Traveling Salesman Problem. *IEEE Transactions on Evolutionary Computation*, 1(1), 53-66.
